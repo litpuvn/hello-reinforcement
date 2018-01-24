@@ -24,6 +24,9 @@ episode_lengths = []
 
 # run 100 times with random initial weights. Each time, run 100 games to get average best length
 for i in range(100):
+    # weight is from -1.0 to 1.0 to weight each parameter of the observation
+    # observation: cart position, cart velocity, pole Angle, velocity of pole at tip
+    # see this link: https://github.com/openai/gym/wiki/CartPole-v0
     new_weights = np.random.uniform(-1.0, 1.0, 4)
 
     length = []
